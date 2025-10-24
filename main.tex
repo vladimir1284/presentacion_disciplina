@@ -142,394 +142,536 @@
 }
 \setbeamerfont{footline}{size=\small}
 
-% ---------------------------
-% Document info
-% ---------------------------
-\title{NotebookLM en la Enseñanza de la Ingeniería Eléctrica (CMI)}
+% Información del documento
+\title[Análisis Crítico: Sistemas Electromecánicos]{Informe Crítico sobre la Disciplina de Sistemas Electromecánicos}
+\subtitle{Análisis Comparativo con Programas Internacionales}
 \author{Dr. Vladímir Rodríguez Diez}
+\institute{Universidad}
 \date{\today}
+
+% Configuración de notas
+\setbeameroption{show notes}
+
 
 \begin{document}
 % Cheatsheet: https://www.ipgp.fr/~moguilny/LaTeX/fontawesome5Icons.pdf
-\plainTitlePage{Gemini_Generated_Image_btmeajbtmeajbtme.png}{%
+\plainTitlePage{Portada1.png}{%
   % \faTwitter\ \href{https://twitter.com/vladimir12}{@myuser}\\
    % \faGithub\ \href{https://github.com/vladimir1284}{github.com/vladimir1284}\\
    % \faLinkedin\ \href{https://linkedin.com/in/vladímir-rodríguez-diez-12a76649}{/in/vladímir-rodríguez-diez}%
 }
 
-% \begin{frame}
-% \frametitle{Potenciando la Enseñanza de la Ingeniería Eléctrica con Google NotebookLM}
-% \begin{itemize}
-%     \item \textbf{Tipo de Actividad:} \textbf{Clase Metodológica Instructiva (CMI)}.
-%     \item \textbf{Función:} Orientar e \textbf{instruir} a los docentes de la disciplina de Accionamientos Eléctricos mediante la \textbf{argumentación y el análisis}.
-%     \item \textbf{Finalidad:} Elevar la \textbf{maestría pedagógica} del colectivo de disciplina y la calidad del proceso docente-educativo (PDE).
-% \end{itemize}
-% \end{frame}
-
-\begin{frame}
-\frametitle{ChatGPT responde a una pregunta de clases}
-\begin{center}
-  \includegraphics[width=3.5in]{chat_gpt.png}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{El Problema Científico Metodológico}
-
-\textbf{El Problema (La Contradicción Didáctica):}
-\begin{itemize}
-    \item Las IAs generativas convencionales (LLMs) presentan un riesgo alto de \textbf{alucinación} (información inexacta o fabricada).
-    \item Esto es crítico en Ingeniería Eléctrica, donde el \textbf{rigor científico-técnico} y la \textbf{precisión} son insustituibles.
-    \item Se necesita una solución que permita la \textbf{innovación pedagógica} sin sacrificar la \textbf{integridad académica}.
-\end{itemize}
-
-\vfill
-
-\textbf{Planteamiento:}
-\begin{quote}
-¿Cómo integrar eficazmente la IA para \textbf{diseñar recursos didácticos especializados}, garantizando su \textbf{coherencia curricular} y el \textbf{rigor técnico}, y superando la falta de contextualización de las IAs genéricas?
-\end{quote}
-\end{frame}
-
-\begin{frame}
-\frametitle{Objetivo Metodológico y Estrategia}
-
-\textbf{Objetivo Metodológico (El \textit{Para Qué})}:
-\begin{quote}
-\textbf{Instruir} a los docentes del colectivo de Accionamientos Eléctricos en el uso de \textbf{NotebookLM (NLM)} como un \textbf{Asistente de Clases especializado}, fundamentado en la \textbf{bibliografía de autoridad} seleccionada por el profesor, para perfeccionar la \textbf{preparación didáctica} y la creación de contenidos en la enseñanza de la Ingeniería Eléctrica.
-\end{quote}
-\textbf{Estrategia Metodológica}:
-\begin{itemize}
-  {\small
-    \item Esta CMI (\textit{Instructiva}) se inserta en un sistema de trabajo docente-metodológico.
-    \item Será seguida de una Clase Abierta o una Clase Demostrativa (CMD) para comprobar la apropiación colectiva del "cómo hacerlo".
-  }
+  % Índice
+  \begin{frame}{Índice}
+  \tableofcontents
+  \note[item]{Estructura clara en 4 secciones principales}
+  \note[item]{Primera parte: contexto y fundamentación}
+  \note[item]{Segunda parte: contenidos actuales del programa}
+  \note[item]{Tercera parte: comparación internacional (MIT)}
+  \note[item]{Cuarta parte: conclusiones y recomendaciones}
+  \end{frame}
+  
+  \section{Fundamentación de la Disciplina}
+  
+  \begin{frame}{Relevancia de los Sistemas Electromecánicos}
+  \begin{block}{Contexto Energético Global}
+  \begin{itemize}
+  \item Más del 98\% de la energía eléctrica mundial requiere conversión electromecánica
+  \item Alto porcentaje de consumo mediante motores eléctricos rotatorios
+  \item Aplicaciones críticas: industria, servicios, transporte
   \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Sumario (Plan de la CMI)}
-
-\textbf{I. Introducción:} Problema y Objetivo Metodológico.
-
-\textbf{II. Desarrollo: El Cómo} (Análisis y Argumentación)
-\begin{enumerate}
-    \item Fundamentos de NLM: Arquitectura \textbf{Grounded AI} / RAG.
-    \item Aplicaciones Estratégicas en Accionamientos Eléctricos (Tema~II: Control de Velocidad de los Motores Eléctricos).
-    \item Argumentación Metodológica y Debate.
-\end{enumerate}
-
-\textbf{III. Conclusiones:} Síntesis, Recomendaciones y Debate.
-\end{frame}
-
-\begin{frame}
-\frametitle{Introducción a NotebookLM}
-
-\textbf{NLM:} Herramienta de IA diseñada para \textbf{análisis avanzado de documentos} y \textbf{generación de contenido educativo}.
-
-\vfill
-\textbf{Características Clave para la Educación Superior:}
-\begin{itemize}
-    \item \textbf{Fuentes Propias (RAG):} Interactúa con documentos subidos por el usuario (PDFs, transcripciones, Google Docs/Slides).
-    \item \textbf{Privacidad:} Google no utiliza los datos personales, subidas o consultas para entrenar el modelo (excepto para usuarios menores de 18, con políticas más estrictas).
-    \item \textbf{Citación Transparente:} Todas las respuestas incluyen \textbf{citas} en línea que remiten a las fuentes originales, fomentando la \textbf{integridad académica}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Fundamento Metodológico: RAG y el Rigor Técnico}
-
-\textbf{Arquitectura RAG (Retrieval-Augmented Generation)}:
-\begin{itemize}
-    \item El sistema basa sus salidas \textbf{exclusivamente} en la información extraída de los documentos fuente cargados por el usuario.
-    \item Esto \textbf{minimiza el riesgo de alucinación} (información fabricada), un problema crucial en temas de Ingeniería Eléctrica.
-\end{itemize}
-\vfill
-\textbf{El Valor NLM en Accionamientos Eléctricos (Tesis Central)}:
-\begin{quote}
-NLM se convierte en un \textbf{experto instantáneo} sobre \textbf{nuestra} bibliografía. Proporciona \textbf{Especialización sobre Fuentes Confiables}, ya sean normas, manuales técnicos o apuntes de clases.
-\end{quote}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Acceder a https://notebooklm.google/}
-  \begin{center}
-    \includegraphics[width=4in]{acceder.png}
-  \end{center}
-  Es necesario usar VPN
-\end{frame}
-
-\begin{frame}
-  \frametitle{Primer cuaderno}
-  \begin{center}
-    \includegraphics[width=4in]{inicios.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Agregar Fuentes}
-  \begin{center}
-    \includegraphics[width=4in]{fuentes.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Vista General}
-  \begin{center}
-    \includegraphics[width=4in]{nlm.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{NLM responde a la misma pregunta de clases}
-  \begin{center}
-    \includegraphics[width=3.5in]{indicadores.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tipos de Fuentes Técnicas Soportadas}
-
-\textbf{NLM acepta una variedad de formatos}:
-\begin{itemize}
-    \item \textbf{Documentos:} Archivos PDF (manuales de equipos, hojas de datos, normativas: NEC, IEC, IEEE).
-    \item \textbf{Material de Curso:} Google Docs/Slides, apuntes del profesor (para asegurar la alineación de la enseñanza).
-    \item \textbf{Contenido Digital:} Sitios web (enlaces) y transcripciones de videos de YouTube (copiar/pegar texto).
-\end{itemize}
-% \vfill
-% \textbf{Consideración Metodológica Importante:}
-% \begin{itemize}  
-%     \item \textbf{Símbolos Matemáticos:} {\small Algunos símbolos pueden \textbf{no mostrarse correctamente} en la salida inicial. Se recomienda usar NLM para el texto base y luego herramientas como Google Gemini para corregir y renderizar los símbolos correctamente.}
-% \end{itemize}
-\end{frame}
-
-% \begin{frame}
-% \frametitle{Limitaciones y Precauciones Éticas}
-
-% \textbf{Desafíos Metodológicos y Técnicos}:
-%   \begin{itemize}
-%       \item \textbf{Riesgo de Sobre-Confianza:} Los documentos cargados pueden contener \textbf{errores o información desactualizada}. NLM solo es tan bueno como sus fuentes.
-%       \item \textbf{Supervisión Docente:} El profesor es imprescindible para asegurar la \textbf{precisión pedagógica}.
-%       \item \textbf{Equidad y Costo:} Existe una versión \textit{Plus} (de pago), lo que plantea preocupaciones sobre la \textbf{equidad y el acceso} para estudiantes o instituciones con menos recursos.
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}
-%   \frametitle{Limitaciones y Precauciones Éticas}
-%   \textbf{Desafíos Metodológicos y Técnicos}:
-%   \begin{itemize}
-%       \item \textbf{Propiedad Intelectual (IP):} Compartir \textit{notebooks} con material protegido por derechos de autor (ej. artículos de revistas) puede infringir la ley de copyright, a menos que el usuario tenga plenos derechos o se comparta en modo "solo chat".
-%       \item \textbf{Riesgo Institucional:} Precedentes de Google de discontinuar servicios (ej. Google Jamboard) crean incertidumbre sobre la \textbf{disponibilidad a largo plazo}.
-%   \end{itemize}
-% \end{frame}
-
-
-% II.B. Aplicaciones Estratégicas en Ingeniería Eléctrica
-
-\begin{frame}
-\frametitle{Preparación y Diseño Instruccional}
-
-\textbf{Creación de Bancos de Preguntas Avanzados}:
-\begin{itemize}
-    \item Cargar el \textbf{programa de la asignatura} y \textbf{normativas técnicas} (NEC, IEC).
-    \item Solicitar preguntas de examen que se alineen \textbf{estrictamente} con las fuentes cargadas.
-\end{itemize}
-
-\textbf{Desarrollo de Guías de Laboratorio Seguras}:
-\begin{itemize}
-    \item Subir \textbf{manuales de equipos} (e.g., transformadores, relés) y \textbf{protocolos de seguridad}.
-    \item Pedir a NLM que \textbf{verifique y refine la guía}, cruzando procedimientos con advertencias de fabricantes, mitigando riesgos.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Pregunta para examen}
-  \begin{center}
-    \includegraphics[width=4.5in]{pregunta.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{ Resolución Guiada de Problemas}
-
-\textbf{Resolución Guiada de Problemas Complejos (\textit{Scaffolding})}:
-\begin{itemize}
-    \item Cargar \textbf{problemas resueltos} por el profesor y la \textbf{metodología de solución}.
-    \item El estudiante pregunta: “Basándote en los ejercicios, ¿cuál es el primer paso para abordar este nuevo problema?”.
-    \item \textbf{Valor Metodológico:} Proporciona ayuda \textbf{contextualizada} que guía la metodología sin entregar la solución final, apoyando el \textbf{diálogo socrático} y el \textbf{aprendizaje activo}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Resolución Guiada de Problemas Complejos}
-  \begin{center}
-    \includegraphics[width=4in]{solucion.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{ Multimodalidad y Neurodiversidad}
-
-\textbf{NLM soporta salidas multimodales para diversas preferencias cognitivas}:
-\begin{itemize}
-    \item \textbf{Mind Maps:} Analiza las fuentes y crea mapas mentales para \textbf{visualizar cómo los temas están interconectados} (Ej. Métodos de Control en el Accionamiento Eléctrico).
-    \item \textbf{Video Overviews:} Genera un video con \textbf{voz en off y diapositivas} para resumir el contenido (útil para el repaso rápido).
-    \item \textbf{Audio Overviews/Podcasts:} Convierte textos densos en \textbf{diálogos conversacionales} entre dos agentes de IA.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Mapa Conceptual}
-  \begin{center}
-    \includegraphics[width=4.2in]{mindmap.png}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Evaluación Asistida y Rigurosa}
-
-\textbf{Evaluación Automática Asistida por Criterios}:
-\begin{itemize}
-    \item El docente carga la \textbf{rúbrica oficial} y la \textbf{tarea entregada por el estudiante}.
-    \item NLM genera un informe de evaluación (fortalezas/debilidades) basado \textbf{solo en los criterios definidos} en la rúbrica.
-    \item \textbf{Beneficio:} Automatiza la retroalimentación, mejora la \textbf{consistencia evaluativa} y fomenta la \textbf{alfabetización en evaluación} (\textit{assessment literacy}).
-\end{itemize}
-
-\end{frame}
-
-% II.C. Argumentación Didáctica y Metodológica
-
-\begin{frame}
-\frametitle{ La Integración NLM y Pedagogía Constructivista}
-
-\textbf{Argumentación Didáctica:}
-\begin{itemize}
-    \item NLM facilita la \textbf{interacción dialéctica con el material}.
-    \item Promueve la \textbf{alfabetización en IA (GenAI Literacy)}: Enseña a evaluar, usar éticamente y criticar las salidas de IA.
-    \item Apoya la \textbf{autorregulación del aprendizaje}, ya que los estudiantes se hacen cargo de la planificación, el monitoreo y la evaluación de su estudio.
-\end{itemize}
-\vfill
-\textbf{El Rol del Docente}:
-\begin{itemize}
-    \item El profesor no es un generador de \textit{prompts}, sino un \textbf{curador de fuentes de autoridad} y un \textbf{validador final} de la precisión pedagógica.
-\end{itemize}
-\end{frame}
-
-%III. Conclusiones (Diapositivas 21-25)
-
-\begin{frame}
-\frametitle{ Valoración del Cumplimiento del Objetivo Metodológico }
-
-\begin{itemize}
-    \item NLM, gracias a su \textbf{arquitectura RAG}, proporciona una vía para la \textbf{innovación pedagógica} sin comprometer el \textbf{rigor técnico}.
-\end{itemize}
-
-\textbf{Síntesis y Consolidación}:
-\begin{itemize}
-    \item NLM es una herramienta \textbf{aterrizada, flexible y consciente del contexto}.
-    \item Actúa como un \textbf{co-diseñador pedagógico} que acelera la producción de \textbf{material didáctico preciso} (quizzes, guías, tutores), basado en la autoridad del docente.
-    \item Promueve la \textbf{evaluación consistente} al fundamentar la retroalimentación en rúbricas oficiales (Assessment Literacy).
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{ Recomendaciones Metodológicas}
-
-\textbf{Orientaciones de Valor Generalizador para el Colectivo}:
-\begin{enumerate}
-    \item \textbf{Carga de Fuentes Críticas:} Priorizar la carga de \textbf{notas de clases} y \textbf{bibliografía actualizada} para asegurar la contextualización específica de la asignatura.
-    \item \textbf{Ética y Transparencia:} Instruir a los estudiantes en la verificación constante de las \textbf{citas} que ofrece NLM (función RAG) y utilizar la herramienta para \textbf{síntesis} y \textbf{análisis}, no para la simple generación de contenidos.
-    \item \textbf{Aprovechar la Multimodalidad:} Usar \textbf{Audio y Video Overviews} para el repaso de contenidos complejos, beneficiando a estudiantes con preferencias auditivas.
-\end{enumerate}
-\end{frame}
-
-% \begin{frame}
-% \frametitle{ Vínculo con el Trabajo Metodológico Futuro}
-
-% \textbf{La CMI en el Sistema de Trabajo Docente-Metodológico:}
-% \begin{itemize}
-%     \item La \textbf{Clase Metodológica Instructiva} orientó el \textit{qué} y el \textit{cómo} a nivel conceptual y didáctico.
-%     \item Próximo paso: \textbf{Clase Abierta o Demostrativa (CMD)}.
-%     \item \textbf{Objetivo de la CMD Sugerida:} Demostrar la aplicación práctica de NLM en una clase de "Análisis de Circuitos" para generar ejercicios y tutores contextualizados, verificando si se ha \textbf{perfeccionado la actuación profesoral}.
-% \end{itemize}
-% \vfill
-% \textbf{Recordatorio:} El \textbf{trabajo metodológico} es esencial para elevar la \textbf{maestría pedagógica} de los docentes y la eficiencia del PDE.
-% \end{frame}
-
-% \begin{frame}
-% \frametitle{ Evaluación y Actualización Científica}
-
-% \textbf{Aspectos Clave para Evaluar una CMI}:
-% \begin{itemize}
-%     \item \textbf{Cumplimiento del Objetivo Metodológico} y la estructura de la clase.
-%     \item \textbf{Pertinencia} del Problema Conceptual Metodológico.
-%     \item \textbf{Rigor} en el abordaje de los aspectos científicos y metodológicos.
-%     \item \textbf{Nivel de Actualización} demostrado.
-%     \item Calidad y conducción del \textbf{debate}.
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}
-% \frametitle{ Evaluación y Actualización Científica}
-
-% \textbf{Actualización Constante:}
-% \begin{itemize}
-%     \item El profesor responsable debe demostrar un \textbf{gran nivel de actualización científica y metodológica}. La integración de herramientas como NLM, que están en constante desarrollo, subraya esta necesidad.
-% \end{itemize}
-% \end{frame}
-
-\begin{frame}
-  \frametitle{ Referencias Bibliográficas}
+  \end{block}
   
-  \textbf{Trabajo Docente Metodológico (CMI y CMD)}
+  \pause
+  
+  \begin{block}{Núcleo de la Disciplina}
+  \begin{itemize}
+  \item Convertidores electromecánicos rotatorios (MER)
+  \item Transformadores
+  \item Nexo fundamental: sistema eléctrico - sistema mecánico
+  \end{itemize}
+  \end{block}
+  
+  % SUGERENCIA GRAFICA: Diagrama de flujo simple mostrando:
+  % Energía Primaria -> Conversión Mecánica -> Conversión Eléctrica -> Distribución -> Motores -> Aplicaciones
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Enfatizar la universalidad: 98\% es un dato contundente}
+  \note[item]{Conectar con desafíos actuales: eficiencia energética y sostenibilidad}
+  \note[item]{Los convertidores electromecánicos son el corazón de la infraestructura energética moderna}
+  \note[item]{Mencionar que esta relevancia justifica el análisis crítico que presentaremos}
+  \end{frame}
+  
+  \begin{frame}{Imperativo Contemporáneo}
+  \begin{alertblock}{Desafíos Globales}
+  Problemas energéticos y ambientales requieren profesionales capacitados en:
+  \begin{itemize}
+  \item Proyección de sistemas eficientes
+  \item Evaluación de rendimiento energético
+  \item Mantenimiento predictivo
+  \item Reducción de impacto ambiental
+  \end{itemize}
+  \end{alertblock}
+  
+  \pause
+  
+  \textbf{Implicación Pedagógica:} La formación en Sistemas Electromecánicos no es opcional, es estratégica para el futuro sostenible.
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{Vincular con Agenda 2030 y objetivos de desarrollo sostenible}
+  \note[item]{La disciplina tiene responsabilidad social: formar ingenieros para transición energética}
+  \note[item]{Este contexto justifica un análisis crítico riguroso de nuestros programas}
+  \end{frame}
+  
+  \section{Contenidos y Enfoque Actual}
+  
+  \begin{frame}{Estructura Curricular: Tres Pilares}
+  \begin{columns}[T]
+  \column{0.33\textwidth}
+  \centering
+  \textbf{Pilar 1}\\
+  \textcolor{blue}{Magnetismo y Transformadores}
+  \begin{itemize}
+  \item Circuitos magnéticos
+  \item Transformadores ideales y reales
+  \item Configuraciones trifásicas
+  \item Modelos matemáticos
+  \end{itemize}
+  
+  \column{0.33\textwidth}
+  \centering
+  \textbf{Pilar 2}\\
+  \textcolor{red}{Máquinas Eléctricas Rotatorias}
+  \begin{itemize}
+  \item Conversión energética
+  \item Máquinas sincrónicas
+  \item Máquinas asincrónicas
+  \item Máquinas CC
+  \end{itemize}
+  
+  \column{0.33\textwidth}
+  \centering
+  \textbf{Pilar 3}\\
+  \textcolor{green!50!black}{Control y Electrónica}
+  \begin{itemize}
+  \item Teoría de control
+  \item Accionamientos
+  \item Variadores de velocidad
+  \item Simulación
+  \end{itemize}
+  \end{columns}
+  
+  % SUGERENCIA GRAFICA: Tres columnas con iconos representativos para cada pilar
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Estructura coherente e integradora}
+  \note[item]{Pilar 1: Base teórica fundamental}
+  \note[item]{Pilar 2: Dispositivos y máquinas específicas}
+  \note[item]{Pilar 3: Aplicación y control - conexión con industria 4.0}
+  \note[item]{Esta estructura es sólida, pero evaluaremos si es suficiente comparada con estándares internacionales}
+  \end{frame}
+  
+  \begin{frame}{Profundidad Temática: Transformadores}
+  \textbf{Contenidos Específicos:}
+  \begin{itemize}
+  \item Características constructivas y principio de operación
+  \item Circuito equivalente y ensayos normalizados
+  \item Transformadores trifásicos: grupos de conexión
+  \item Operación en paralelo y autotransformadores
+  \item Modelado para régimen normal y transitorio
+  \end{itemize}
+  
+  \vspace{0.3cm}
+  
+  \begin{exampleblock}{Fortaleza Identificada}
+  Cobertura completa desde fundamentos físicos hasta aplicación industrial
+  \end{exampleblock}
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{Nivel de profundidad adecuado para ingeniería}
+  \note[item]{Incluye tanto teoría como práctica}
+  \note[item]{Los ensayos normalizados conectan con estándares internacionales}
+  \note[item]{El modelado matemático permite simulación computacional}
+  \end{frame}
+  
+  \begin{frame}{Profundidad Temática: MERs y Control}
+  \begin{block}{Máquinas Eléctricas Rotatorias}
+  \begin{itemize}
+  \item Análisis energético y determinación de par
+  \item Cuatro tipos principales: sincrónicas, asincrónicas, reluctancia conmutada, CC
+  \item Énfasis especial en máquinas asincrónicas (industriales)
+  \item Motores de alta eficiencia
+  \end{itemize}
+  \end{block}
+  
+  \begin{block}{Control e Ingeniería de Accionamiento}
+  \begin{itemize}
+  \item Lazo abierto y cerrado, funciones de transferencia
+  \item Herramientas: MATLAB y SIMULINK
+  \item Controladores: P, I, PI, PID
+  \item Variadores de velocidad y control por orientación de campo
+  \end{itemize}
+  \end{block}
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Cobertura amplia de tipos de máquinas}
+  \note[item]{Énfasis en asincrónicas justificado: son las más usadas industrialmente}
+  \note[item]{Integración de control es un punto fuerte del programa}
+  \note[item]{Uso de software profesional (MATLAB) prepara para la industria}
+  \note[item]{Pregunta crítica a plantear después: ¿Es suficiente esta profundidad comparada internacionalmente?}
+  \end{frame}
+  
+  \begin{frame}{Enfoque Pedagógico: Habilidades Prácticas}
+  \textbf{Objetivos de Formación:}
   \begin{enumerate}
-      \item MES (2022). Resolución 47/2022 Reglamento Organizativo del Proceso Docente y de Dirección del Trabajo Docente y Metodológico para las Carreras Universitarias.
-      \item Moral Roldan, J. (s.f.). Clase Metodológica. Planificación, introducción, desarrollo y conclusiones.
-      \item Anónimo (s.f.). Clase Metodológica (EcuRed). Concepto y organización escalonada (reunión, clase, control).
-      \item Barazal y Expósito (2010). Clase Metodológica en ES. Estrategia para elevar la maestría pedagógica.
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}
-  \frametitle{ Referencias Bibliográficas}
-  \begin{enumerate}
-      \item Machado Díaz et al. (2023). Manual CMI. Estructura de la CMI; problema conceptual metodológico como centro de la clase.
-      \item Batista Salvador et al. (s.f.). Fundamentos CMI/CMD. Guía metodológica y didáctica; alternativas de estructura para la CMI.
+  \item Modelado matemático de transformadores y MERs
+  \item Simulación de comportamiento en régimen normal y transitorio
+  \item Conexión y puesta en marcha de máquinas
+  \item Análisis y síntesis de sistemas de control
+  \item Selección y ajuste de variadores de velocidad
   \end{enumerate}
   
-  \textbf{Google NotebookLM: Características y Usos Generales}
-  \begin{enumerate}    
-    \item Reyna, J. (2025). Potencial de NotebookLM. Rol en investigación, estudio y docencia; arquitectura RAG para reducir alucinación.
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}
-  \frametitle{ Referencias Bibliográficas}
-
-  \begin{enumerate}    
-    \item Ditch That Textbook (2025). 10 Cosas NLM. Funcionalidades clave (audio/video overviews, mapas mentales, reportes) y gratuidad.
-    \item Classnotes Nicole (s.f.). 10 Usos NLM. Creación de recursos como flashcards, cuestionarios, planes de unidad y resúmenes de audio interactivos (podcast).
-    \item Huffman y Hutson (2024). NLM en Historia. Estudio de caso para generar contenido multimedia y podcast a partir de un diario.
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}
-  \frametitle{ Referencias Bibliográficas}
+  \vspace{0.3cm}
   
-  \textbf{Google NotebookLM: Aplicaciones Especializadas}
+  \begin{alertblock}{Evaluación Rigurosa}
+  Examen de prácticas de laboratorio: prueba eliminatoria (nota mínima 5/10). Procedimientos basados en normas internacionales vigentes.
+  \end{alertblock}
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{Orientación práctica clara y bien definida}
+  \note[item]{El examen eliminatorio de laboratorio garantiza competencias prácticas}
+  \note[item]{Uso de normas internacionales es positivo}
+  \note[item]{Balance teoría-práctica parece adecuado}
+  \note[item]{Preparación: ¿Esto es estándar internacional o excepcional?}
+  \end{frame}
+  
+  \section{Comparación con Estándares Internacionales (MIT)}
+  
+  \begin{frame}{MIT: Enfoque Diferencial}
+  \begin{block}{Análisis Comparativo}
+  Se analizaron tres cursos del MIT:
+  \begin{itemize}
+  \item 6.007 (Pregrado): Electromagnetic Energy
+  \item 6.302 (Posgrado): Feedback Systems
+  \item 6.245 (Posgrado): Multivariable Control Systems
+  \end{itemize}
+  \end{block}
+  
+  \pause
+  
+  \textbf{Diferencias identificadas:}
   \begin{enumerate}
-      \item CM Ing. Eléctrica (s.f.). NLM en Ingeniería. Aplicación especializada en diseño de bancos de preguntas técnicos, guías de laboratorio y "Tutores de Materia Personalizados".
-      \item Saunders y Varga-Atkins (s.f.). NLM y Assessment Literacy. Uso de NLM para generar podcast a partir de descripciones de tareas formativas y assessment briefs para mejorar la comprensión de la evaluación.
+  \item Integración de física cuántica y optoelectrónica
+  \item Especialización avanzada en control
+  \item Segregación de contenidos por nivel
   \end{enumerate}
-\end{frame}
+  
+  % SUGERENCIA GRAFICA: Tabla comparativa simple con tres columnas:
+  % Aspecto | Programa Analizado | MIT
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{MIT representa excelencia internacional reconocida}
+  \note[item]{No buscamos copiar, sino identificar brechas y oportunidades}
+  \note[item]{Tres diferencias principales que exploraremos}
+  \note[item]{Importante: diferencias no implican deficiencias, sino enfoques distintos}
+  \end{frame}
+  
+  \begin{frame}{Diferencia 1: Física Fundamental Ampliada}
+  \begin{columns}
+  \column{0.5\textwidth}
+  \textbf{Programa Analizado}
+  \begin{itemize}
+  \item Conceptos básicos de electricidad y magnetismo
+  \item Enfoque en conversión electromecánica clásica
+  \item Generación y utilización a gran escala
+  \end{itemize}
+  
+  \column{0.6\textwidth}
+  \textbf{MIT 6.007}
+  \begin{itemize}
+  \item Electromagnetismo clásico \textbf{y cuántico}
+  \item Fotones como ondas y partículas
+  \item Dispositivos modernos: células solares, láseres, pantallas
+  \item Escala macroscópica \textbf{y cuántica}
+  \end{itemize}
+  \end{columns}
+  
+  \vspace{0.5cm}
+  
+  \begin{alertblock}{Observación Crítica}
+  El programa del MIT integra tecnologías emergentes optoelectrónicas ausentes en nuestro currículo.
+  \end{alertblock}
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Esta es una diferencia significativa}
+  \note[item]{MIT amplía el concepto de "conversión de energía electromagnética"}
+  \note[item]{Incluye tecnologías del siglo XXI: solar, LED, láser}
+  \note[item]{Pregunta crítica: ¿Deberíamos incorporar estos contenidos?}
+  \note[item]{Consideración: nuestro enfoque es más tradicional pero sólido en su ámbito}
+  \note[item]{Posible área de expansión curricular}
+  \end{frame}
+  
+  \begin{frame}{Diferencia 2: Control Especializado vs. Integrado}
+  \textbf{Nuestro Enfoque:}
+  \begin{itemize}
+    \small
+    \item Control integrado en la disciplina general
+    \item Controladores P, I, PI, PID
+    \item Variadores de velocidad
+    \item Suficiente para operación y mantenimiento industrial
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{Enfoque MIT:}
+  \begin{itemize}
+    \small
+    \item Cursos de posgrado dedicados exclusivamente a control
+    \item 6.302: Sistemas de retroalimentación con laboratorios especializados
+    \item 6.245: Metodologías avanzadas - optimización H-infinity, Mu Synthesis, LMI
+    \item Diseño multivariable asistido por computadora
+  \end{itemize}
+  
+  \pause
+  {\small 
+    \textbf{Interpretación:} integración vs. especialización profunda.
+  }
 
-\begin{frame}
-\frametitle{ Preguntas y Comentarios }
-\begin{itemize}
-    \item Agradecemos su participación activa en esta \textbf{Clase Metodológica Instructiva}.
-    \item Abrimos el espacio para un intercambio final sobre las posibles vías para aplicar NLM en sus respectivas asignaturas.
-    \item Recomendaciones para una futura \textbf{Clase Metodológica Demostrativa}.
-\end{itemize}
-\end{frame}
+  \note[item]{TIEMPO: 2 minutos}
+  \note[item]{Aquí no hay un "mejor" absoluto, depende de objetivos}
+  \note[item]{Nuestro enfoque: formar ingenieros operativos}
+  \note[item]{Enfoque MIT: formar también investigadores en control avanzado}
+  \note[item]{H-infinity y Mu Synthesis son técnicas de frontera en control robusto}
+  \note[item]{Pregunta: ¿Nuestros graduados necesitan este nivel en pregrado?}
+  \note[item]{Posible solución: mantener integración en pregrado, ofrecer especialización en posgrado}
+  \end{frame}
+  
+  \begin{frame}{Diferencia 3: Amplitud vs. Profundidad}
+  % SUGERENCIA GRAFICA: Diagrama de Venn o esquema visual comparando alcances
+  
+  \begin{block}{Programa Analizado}
+  \textbf{Enfoque de Amplitud Aplicada}
+  \begin{itemize}
+  \item Cobertura integral de conversión electromecánica tradicional
+  \item Orientación a aplicaciones industriales inmediatas
+  \item Formación de ingenieros para infraestructura energética actual
+  \end{itemize}
+  \end{block}
+  
+  \begin{block}{MIT}
+  \textbf{Enfoque de Profundidad Fundamental}
+  \begin{itemize}
+  \item Fundamentos físicos extendidos (cuántica)
+  \item Segregación por especialización (cursos dedicados)
+  \item Orientación hacia investigación y desarrollo tecnológico
+  \end{itemize}
+  \end{block}
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{Dos modelos educativos legítimos}
+  \note[item]{Nuestro modelo: generalista aplicado}
+  \note[item]{Modelo MIT: especialista investigador}
+  \note[item]{Ambos producen ingenieros competentes pero con perfiles diferentes}
+  \note[item]{La pregunta es: ¿cuál necesita nuestra industria y sociedad?}
+  \end{frame}
+  
+  \section{Análisis Crítico y Conclusiones}
+  
+  \begin{frame}{Fortalezas del Programa Actual}
+  \begin{enumerate}
+  \item \textbf{Integración coherente:} Tres pilares bien articulados
+  \item \textbf{Orientación práctica:} Laboratorios con evaluación rigurosa
+  \item \textbf{Cobertura completa:} De fundamentos a aplicación industrial
+  \item \textbf{Herramientas modernas:} MATLAB, SIMULINK
+  \item \textbf{Normas internacionales:} Procedimientos estandarizados
+  \item \textbf{Relevancia actual:} Responde a demandas de eficiencia energética
+  \end{enumerate}
+  
+  \vspace{0.3cm}
+  
+  \begin{exampleblock}{Valoración}
+  El programa forma ingenieros capacitados para enfrentar los desafíos actuales de la infraestructura energética.
+  \end{exampleblock}
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Importante reconocer fortalezas antes de críticas}
+  \note[item]{El programa tiene bases sólidas}
+  \note[item]{Cumple su objetivo fundamental: formar ingenieros operativos}
+  \note[item]{La integración de tres pilares es pedagogicamente efectiva}
+  \note[item]{No todo debe cambiar - hay mucho que preservar}
+  \end{frame}
+  
+  \begin{frame}{Áreas de Oportunidad Identificadas}
+  \textbf{1. Tecnologías Emergentes}
+  \begin{itemize}
+  \item Incorporación limitada de dispositivos optoelectrónicos
+  \item Ausencia de contenidos sobre energías renovables modernas
+  \item Brecha en tecnologías de escala cuántica
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{2. Profundización en Control Avanzado}
+  \begin{itemize}
+  \item Control multivariable limitado a nivel introductorio
+  \item Técnicas de optimización avanzadas ausentes en pregrado
+  \item Oportunidad para cursos de posgrado especializados
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{3. Actualización Metodológica}
+  \begin{itemize}
+  \item Posible integración de metodologías de diseño asistido por IA
+  \item Mayor énfasis en simulación de sistemas complejos
+  \end{itemize}
+  
+  \note[item]{TIEMPO: 2 minutos}
+  \note[item]{Crítica constructiva, no destructiva}
+  \note[item]{Área 1: El mundo va hacia renovables, vehículos eléctricos, electrónica de potencia avanzada}
+  \note[item]{Células solares, LED, sistemas de almacenamiento son conversión electromagnética moderna}
+  \note[item]{Área 2: Control avanzado podría ser posgrado, no necesariamente pregrado}
+  \note[item]{Área 3: IA y machine learning están transformando el diseño de sistemas de control}
+  \note[item]{Estas son oportunidades, no deficiencias críticas}
+  \end{frame}
+  
+  \begin{frame}{Recomendaciones Estratégicas}
+  \begin{block}{Corto Plazo}
+  \begin{itemize}
+    \small
+  \item Incorporar módulo sobre conversión fotovoltaica y LED
+  \item Ampliar contenido sobre vehículos eléctricos y almacenamiento
+  \item Actualizar casos de estudio con aplicaciones contemporáneas
+  \end{itemize}
+  \end{block}
 
-\end{document}
+  \vspace{-0.3cm}
+
+  \begin{block}{Mediano Plazo}
+  \begin{itemize}
+    \small
+  \item Desarrollar curso optativo de posgrado en control multivariable
+  \item Establecer laboratorio de sistemas optoelectrónicos
+  \item Colaboraciones internacionales para actualización docente
+  \end{itemize}
+  \end{block}
+  
+  \vspace{-0.3cm}
+
+  \begin{block}{Largo Plazo}
+  \begin{itemize}
+    \small
+  \item Rediseño curricular integrando física cuántica aplicada
+  \item Programa de posgrado especializado en control avanzado
+  \end{itemize}
+  \end{block}
+  
+  \note[item]{TIEMPO: 2 minutos}
+  \note[item]{Recomendaciones realistas y escalonadas}
+  \note[item]{Corto plazo: ajustes sin reestructuración mayor}
+  \note[item]{Mediano plazo: expansión gradual}
+  \note[item]{Largo plazo: visión transformadora}
+  \note[item]{Importante: mantener fortalezas actuales mientras se innova}
+  \note[item]{No todo debe hacerse simultáneamente - priorizar según recursos}
+  \end{frame}
+  
+  \begin{frame}{Conclusión General}
+  \begin{alertblock}{Síntesis}
+  La disciplina de Sistemas Electromecánicos es \textbf{fundamental, bien estructurada y cumple su misión} de formar ingenieros para la infraestructura energética actual.
+  \end{alertblock}
+  
+  \pause
+
+  \vspace{-0.2cm}
+
+  \textbf{Balance Final:}
+  \begin{itemize}
+  \item[$+$] Sólida formación en conversión electromecánica clásica
+  \item[$+$] Integración efectiva de teoría, práctica y control
+  \item[$+$] Preparación adecuada para industria tradicional
+  \item[$-$] Limitada incorporación de tecnologías emergentes
+  \item[$-$] Control avanzado solo a nivel introductorio
+  \end{itemize}
+  
+  % \vspace{0.3cm}
+  
+  \textbf{Visión:} Evolucionar sin perder identidad - expandir hacia tecnologías del siglo XXI manteniendo fortalezas consolidadas.
+  
+  \note[item]{TIEMPO: 1.5 minutos}
+  \note[item]{Mensaje balanceado: fortalezas y oportunidades}
+  \note[item]{No hay crisis, hay oportunidad de mejora}
+  \note[item]{El programa actual es competente, puede ser excepcional}
+  \note[item]{La comparación con MIT no es para copiarlo, sino para inspirar evolución}
+  \note[item]{Preparar para transición: estamos bien, podemos estar mejor}
+  \end{frame}
+  
+  \begin{frame}{Impacto de las Mejoras Propuestas}
+  % SUGERENCIA GRAFICA: Diagrama radial o matriz mostrando impactos
+  
+  \textbf{Beneficios Esperados:}
+  \begin{enumerate}
+  \item \textbf{Para los estudiantes:} Formación más competitiva internacionalmente
+  \item \textbf{Para la institución:} Mayor prestigio y atracción de talento
+  \item \textbf{Para la industria:} Ingenieros preparados para transición energética
+  \item \textbf{Para la sociedad:} Contribución a sostenibilidad y innovación
+  \end{enumerate}
+  
+  \vspace{0.5cm}
+  
+  \begin{exampleblock}{Llamado a la Acción}
+  La actualización curricular no es solo deseable, es necesaria para mantener la relevancia de la disciplina en un mundo tecnológicamente dinámico.
+  \end{exampleblock}
+  
+  \note[item]{TIEMPO: 1 minuto}
+  \note[item]{Conectar mejoras con stakeholders múltiples}
+  \note[item]{No es capricho académico, es necesidad estratégica}
+  \note[item]{El mundo de la energía está cambiando rápidamente}
+  \note[item]{Nuestros graduados competirán en mercado global}
+  \note[item]{La disciplina debe evolucionar para mantenerse relevante}
+  \end{frame}
+  
+  \begin{frame}{Referencias Principales}
+  \small
+  \textbf{Programas Analizados:}
+  \begin{itemize}
+  \item Circuitos Magnéticos y Transformadores: Programa
+  \item Máquinas Eléctricas (2011) - Escuela Universitaria de Ingeniería Técnica Minera
+  \item Plan de Estudios: Disciplina Sistemas Electromecánicos
+  \end{itemize}
+  
+  \vspace{0.3cm}
+  
+  \textbf{Referencias Internacionales (MIT OpenCourseWare):}
+  \begin{itemize}
+  \item 6.007: Electromagnetic Energy - From Motors to Lasers
+  \item 6.302: Feedback Systems
+  \item 6.245: Multivariable Control Systems
+  \end{itemize}
+  
+  \note[item]{TIEMPO: 30 segundos}
+  \note[item]{Todas las fuentes son documentadas y verificables}
+  \note[item]{Análisis basado en documentación oficial}
+  \note[item]{MIT OpenCourseWare es recurso público y reconocido}
+  \end{frame}
+  
+  \begin{frame}[plain]
+  \begin{center}
+  \Huge Gracias por su atención
+  
+  \vspace{1cm}
+  
+  \Large Abierto a preguntas y comentarios del tribunal
+  \end{center}
+  
+  \note[item]{TIEMPO: Variable según preguntas}
+  \note[item]{Agradecer al tribunal su tiempo y atención}
+  \note[item]{Mostrar disposición constructiva ante críticas}
+  \note[item]{Preparación para preguntas probables:}
+  \note[item]{- ¿Por qué MIT como referencia única?}
+  \note[item]{- ¿Costos de implementación de mejoras?}
+  \note[item]{- ¿Priorización de recomendaciones?}
+  \note[item]{- ¿Experiencia docente propia en la disciplina?}
+  \note[item]{Mantener postura: análisis crítico constructivo, no destructivo}
+  \end{frame}
+  
+  \end{document}
